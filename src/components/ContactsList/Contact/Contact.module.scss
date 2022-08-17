@@ -1,0 +1,66 @@
+.contact {
+  all: unset;
+
+  padding: 8px 10px;
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+  border-radius: 4px;
+
+  transition: all 100ms ease;
+
+  .avatar {
+    max-width: 24px;
+    max-height: 24px;
+    border-radius: 3px;
+
+    transition: all 100ms ease;
+  }
+
+  .name {
+    line-height: 1;
+    text-transform: lowercase;
+    transition: all 100ms ease;
+
+    b {
+      font-weight: 900;
+      color: var(--color-purple);
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-purple-light);
+
+    .name {
+      color: var(--color-purple);
+    }
+  }
+
+  &--unread {
+    .name {
+      font-weight: 700;
+      color: var(--color-purple);
+
+      b {
+        color: var(--color-green);
+      }
+    }
+  }
+
+  &--selected,
+  &--selected:hover {
+    background-color: var(--color-purple);
+
+    .name {
+      color: var(--white);
+
+      b {
+        color: var(--color-green);
+      }
+    }
+  }
+}

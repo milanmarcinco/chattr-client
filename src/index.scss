@@ -1,80 +1,52 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-  color-scheme: light dark;
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --size-8px: calc(8rem / 16);
+  --size-10px: calc(12rem / 16);
+  --size-12px: calc(12rem / 16);
+  --size-14px: calc(14rem / 16);
+  --size-16px: calc(16rem / 16);
+  --size-18px: calc(18rem / 16);
+
+  --color-purple: #6956ea;
+  --color-purple-light: rgba(105, 86, 234, 0.12);
+  --color-green: #72bfaf;
+
+  --color-gray-500: #5c5c5c;
+  --color-gray-400: #7f7f7f;
+  --color-gray-300: #a6a6a6;
+  --color-gray-200: #dadada;
+  --color-gray-100: #f4f4f4;
+
+  --white: #fff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-
-  &:hover {
-    color: #535bf2;
-  }
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-
-  display: flex;
-  place-items: center;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  padding: 0.6em 1.2em;
-
-  border: 1px solid transparent;
-  border-radius: 8px;
-
-  font-size: 1em;
+  font-family: "Urbanist", sans-serif;
+  font-size: var(--size-14px);
+  color: var(--color-gray-400);
+  letter-spacing: 1px;
+  line-height: 1.5;
   font-weight: 500;
-  font-family: inherit;
-
-  background-color: #1a1a1a;
-
-  cursor: pointer;
-  transition: border-color 0.25s;
-
-  &:hover {
-    border-color: #646cff;
-  }
-
-  &:focus,
-  &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
+img {
+  display: block;
+}
 
-  a:hover {
-    color: #747bff;
-  }
+svg {
+  fill: var(--color-gray-300);
+}
 
-  button {
-    background-color: #f9f9f9;
-  }
+input {
+  font-family: inherit;
 }

@@ -1,0 +1,20 @@
+.chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noOpenChatIllustration {
+  max-width: 368px;
+  animation: 200ms appear ease forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

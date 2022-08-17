@@ -1,0 +1,22 @@
+.button {
+  all: unset;
+
+  padding: 0;
+  cursor: pointer;
+
+  & > * {
+    display: block;
+    transition: all 100ms ease;
+  }
+
+  &:hover > svg {
+    fill: var(--color-gray-400);
+  }
+
+  &--enabled,
+  &--enabled:hover {
+    & > svg {
+      fill: var(--color-purple);
+    }
+  }
+}

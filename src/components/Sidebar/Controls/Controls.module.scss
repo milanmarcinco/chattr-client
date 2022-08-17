@@ -1,0 +1,14 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  max-width: 24px;
+  max-height: 24px;
+
+  margin-left: 2px;
+
+  border-radius: 3px;
+}

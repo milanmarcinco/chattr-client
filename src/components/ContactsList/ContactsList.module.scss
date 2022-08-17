@@ -1,0 +1,11 @@
+.title {
+  font-size: var(--size-12px);
+  font-weight: 600;
+  color: var(--color-gray-300);
+  cursor: default;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+}
