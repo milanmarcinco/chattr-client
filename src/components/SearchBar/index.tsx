@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import useStore from "../../store";
-import SearchIcon from "../../assets/search.svg";
+import useStore from "@/store";
+import SearchIcon from "@/assets/search.svg";
 import styles from "./SearchBar.module.scss";
 
 const SearchBar = () => {

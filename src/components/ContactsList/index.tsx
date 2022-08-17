@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import Contact from "./Contact";
-import useStore from "../../store";
+import useStore from "@/store";
 import styles from "./ContactsList.module.scss";
 
 const ContactsList = () => {

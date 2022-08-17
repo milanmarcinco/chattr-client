@@ -1,5 +1,5 @@
-import useStore from "../../../store";
-import anonymizeString from "../../../lib/anonymizeString";
+import useStore from "@/store";
+import anonymizeString from "@/lib/anonymizeString";
 import cx from "classnames";
 import styles from "./Contact.module.scss";
 

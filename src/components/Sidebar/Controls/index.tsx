@@ -1,9 +1,9 @@
-import IconButton from "../../IconButton";
+import IconButton from "@/components/IconButton";
 
-import useStore from "../../../store";
+import useStore from "@/store";
 
-import VisibilityOffIcon from "../../../assets/visibility-off.svg";
-import HomeIcon from "../../../assets/home.svg";
+import VisibilityOffIcon from "@/assets/visibility-off.svg";
+import HomeIcon from "@/assets/home.svg";
 
 import styles from "./Controls.module.scss";
 

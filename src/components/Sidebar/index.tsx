@@ -1,7 +1,7 @@
-import LogoWithName from "../LogoWithName";
+import LogoWithName from "@/components/LogoWithName";
 import Controls from "./Controls";
-import SearchBar from "../SearchBar";
-import ContactsList from "../ContactsList";
+import SearchBar from "@/components/SearchBar";
+import ContactsList from "@/components/ContactsList";
 
 import styles from "./Sidebar.module.scss";
 

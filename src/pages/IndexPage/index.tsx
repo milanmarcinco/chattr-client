@@ -1,6 +1,6 @@
-import MainLayout from "../../layouts/MainLayout";
-import Sidebar from "../../components/Sidebar";
-import Chat from "../../components/Chat";
+import MainLayout from "@/layouts/MainLayout";
+import Sidebar from "@/components/Sidebar";
+import Chat from "@/components/Chat";
 
 import styles from "./IndexPage.module.scss";
 
