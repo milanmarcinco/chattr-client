@@ -1,16 +1,27 @@
+import Header from "./Header";
+import Messages from "./Messages";
+import NewMessageControls from "./NewMessageControls";
+
 import useStore from "@/store";
+
 import styles from "./Chat.module.scss";
 
-const Chat = () => {
-  const selectedContactId = useStore((state) => state.selectedContactId);
+interface IProps {
+  selectedRoom: IRoom | null;
+}
 
-  return (
-    <div className={styles.chat}>
-      {!selectedContactId && (
-        <img src="/graphics/empty-chat-illustration.svg" className={styles.noOpenChatIllustration} />
-      )}
-    </div>
-  );
-};
+const Chat = ({ selectedRoom }: IProps) => (
+  <div className={styles.chat}>
+    {selectedRoom && (
+      <>
+        <Header room={selectedRoom} />
+        <Messages messages={selectedRoom.messages} />
+        <NewMessageControls />
+      </>
+    )}
+
+    {!selectedRoom && <img src="/graphics/empty-chat-illustration.svg" className={styles.noOpenChatIllustration} />}
+  </div>
+);
 
 export default Chat;

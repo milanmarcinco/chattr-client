@@ -1,18 +1,22 @@
-import LogoWithName from "@/components/LogoWithName";
+import LogoWithName from "@/components/Sidebar/LogoWithName";
 import Controls from "./Controls";
-import SearchBar from "@/components/SearchBar";
-import ContactsList from "@/components/ContactsList";
+import SearchBar from "@/components/Sidebar/SearchBar";
+import RoomsList from "@/components/Sidebar/RoomsList";
 
 import styles from "./Sidebar.module.scss";
 
-const Sidebar = () => (
+interface IProps {
+  selectedRoom: IRoom | null;
+}
+
+const Sidebar = ({ selectedRoom }: IProps) => (
   <div className={styles.sidebar}>
     <div className={styles.helperContainer}>
       <LogoWithName />
-      <Controls />
+      <Controls selectedRoom={selectedRoom} />
     </div>
     <SearchBar />
-    <ContactsList />
+    <RoomsList selectedRoom={selectedRoom} />
   </div>
 );
 

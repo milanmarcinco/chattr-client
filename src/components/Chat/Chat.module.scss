@@ -1,20 +1,15 @@
+@import "@/index.scss";
+
 .chat {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
 }
 
 .noOpenChatIllustration {
+  flex-grow: 1;
   max-width: 368px;
+  margin: 0 auto;
   animation: 200ms appear ease forwards;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }

@@ -1,19 +1,26 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { Socket } from "socket.io-client";
 
-import IndexPage from "./pages/IndexPage";
-
+import MainPage from "./pages/MainPage";
+import useInitSocket from "./hooks/useInitSocket";
 import useStore from "./store";
 
 import "./App.scss";
 
-function App() {
+interface IProps {
+  socket: Socket;
+}
+
+function App({ socket }: IProps) {
   const isLoggedIn = useStore((state) => state.isLoggedIn);
+
+  useInitSocket(socket);
 
   return (
     <Routes>
       {isLoggedIn && (
         <>
-          <Route path="/" element={<IndexPage />} />
+          <Route path="/" element={<MainPage />} />
           <Route path="*" element={<Navigate to="/" replace={true} />} />
         </>
       )}

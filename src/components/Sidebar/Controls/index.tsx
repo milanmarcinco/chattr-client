@@ -7,17 +7,22 @@ import HomeIcon from "@/assets/home.svg";
 
 import styles from "./Controls.module.scss";
 
-const Controls = () => {
-  const selectedContactId = useStore((state) => state.selectedContactId);
-  const unselectContact = useStore((state) => state.unselectContact);
+interface IProps {
+  selectedRoom: IRoom | null;
+}
+
+const Controls = ({ selectedRoom }: IProps) => {
+  const setSelectedRoomId = useStore((state) => state.setSelectedRoomId);
 
   const privacyModeEnabled = useStore((state) => state.privacyModeEnabled);
   const togglePrivacyMode = useStore((state) => state.togglePrivacyMode);
 
+  const handleUnselectRoom = () => setSelectedRoomId(null);
+
   return (
     <div className={styles.controls}>
       <IconButton icon={<VisibilityOffIcon />} onClick={togglePrivacyMode} enabled={privacyModeEnabled} />
-      <IconButton icon={<HomeIcon />} onClick={unselectContact} enabled={!selectedContactId} />
+      <IconButton icon={<HomeIcon />} onClick={handleUnselectRoom} enabled={!selectedRoom} />
       <img className={styles.avatar} src="/avatars/avatar-3.png" alt="Your profile picture" />
     </div>
   );

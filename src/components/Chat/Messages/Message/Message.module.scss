@@ -1,0 +1,25 @@
+@import "@/index.scss";
+
+.message {
+  display: flex;
+  gap: 12px;
+
+  opacity: 0;
+  animation: 200ms appear ease forwards;
+}
+
+.name {
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--color-purple);
+
+  &--hideName {
+    visibility: hidden;
+  }
+
+  &--isMine {
+    color: var(--color-green);
+  }
+}
